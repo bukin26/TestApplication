@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundPrimaryColor">
+
+    <ImageView
+        android:id="@+id/deviceImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="10dp"
+        android:scaleType="fitCenter"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/ic_rounded_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/deviceTitleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/deviceTitleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/headerTextColor"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/deviceSerialNumberText"
+        app:layout_constraintEnd_toStartOf="@id/editeButton"
+        app:layout_constraintStart_toEndOf="@id/deviceImage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Home Number 1" />
+
+    <TextView
+        android:id="@+id/deviceSerialNumberText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/bodyTextColor"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/deviceTitleText"
+        app:layout_constraintStart_toStartOf="@id/deviceTitleText"
+        app:layout_constraintTop_toBottomOf="@id/deviceTitleText"
+        tools:text="SN: 123456677" />
+
+    <ImageView
+        android:padding="10dp"
+        android:id="@+id/editeButton"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:scaleType="fitCenter"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/ic_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/deviceTitleText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

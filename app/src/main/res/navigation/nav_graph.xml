@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.bukinmg.testapplication.ui.list.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_listFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_dialogFragment"
+            app:destination="@id/dialogFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.bukinmg.testapplication.ui.details.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="serialNumber"
+            app:argType="integer" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogFragment"
+        android:name="com.bukinmg.testapplication.ui.dialog.DialogFragment"
+        android:label="DialogFragment">
+        <argument
+            android:name="serialNumber"
+            app:argType="integer" />
+    </dialog>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.bukinmg.testapplication.ui.edit.EditFragment"
+        android:label="EditFragment">
+        <argument
+            android:name="serialNumber"
+            app:argType="integer" />
+    </fragment>
+</navigation>
